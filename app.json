@@ -1,10 +1,10 @@
 {
   "expo": {
     "name": "dev <cunhãs>",
-    "slug": "dev <cunhãs>",
+    "slug": "devcunhas",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/Group 5758.png",
+    "icon": "./assets/images/logo-dev-cunhas.png",
     "scheme": "devcunhas",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -14,12 +14,13 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "foregroundImage": "./assets/images/logo-dev-cunhas.png",
+        "backgroundImage": "./assets/images/logo-dev-cunhas.png",
+        "monochromeImage": "./assets/images/logo-dev-cunhas.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.raescla.devcunhas"
     },
     "web": {
       "output": "static",
@@ -30,7 +31,7 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/logo-dev-cunhas.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff",
@@ -39,11 +40,29 @@
           }
         }
       ],
-      "expo-video"
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": true,
+          "supportsPictureInPicture": true
+        }
+      ],
+       [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "5dc1b86a-4994-4d27-83dd-dfd8b733d4a1"
+      }
     }
   }
 }
